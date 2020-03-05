@@ -8,6 +8,7 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    url: ""
   },
   // 事件处理函数
   bindViewTap() {
@@ -16,6 +17,9 @@ Page({
     })
   },
   onLoad() {
+    this.setData({
+      url: `https://pos.cbcoffee.cn/addons/niushop_b2b2c/core/index.php/wap`
+    })
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

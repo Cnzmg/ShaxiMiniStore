@@ -5,15 +5,17 @@ Page({
 
   },
 
-  onLoad() {
+  onLoad(options: any) {
     const HttpApiFollow = 'https://pos.cbcoffee.cn/addons/niushop_b2b2c/core/index.php/wap/order/login';
+    const HttpApiFollowCall = 'https://pos.cbcoffee.cn/addons/niushop_b2b2c/core/index.php/wap/pay/wchatpayresult';
     // const HttpApiFollow = 'https://pos.cbcoffee.cn/addons/niushop_b2b2c/core/index.php/wap/order/tests';
+    console.log(options)
     wx.login({
       success: res => {
         wx.request({
           url: HttpApiFollow,
           method: "POST",
-          data: {code: res.code},
+          data: {code: res.code, money: options.money},
           success: (success: any) => {
               wx.requestPayment({
                 timeStamp: success.data.timeStamp,
@@ -23,7 +25,20 @@ Page({
                 paySign: success.data.paySign,
                 success: (res) => {
                     if (res.errMsg == 'requestPayment:ok') {
-                        console.log(`success`)
+                        wx.request({
+                          url: HttpApiFollowCall +`/?msg=1&out_trade_no=${ options.orderId }`,
+                          method: "GET",
+                          data: {},
+                          success: () => {
+                            wx.reLaunch({
+                              url: '/pages/order/order'
+                            })
+                          },
+                          fail: err => {
+                              console.log(err)
+                          }
+                      })
+
                     } else {
                         wx.showToast({
                             title: '支付失败',
@@ -33,8 +48,8 @@ Page({
                     }
                 },
                 fail: () => {
-                    wx.navigateBack({  //取消支付 返回上一层
-                        delta: 1
+                    wx.reLaunch({
+                      url: '/pages/order/order'
                     })
                 }
             })
