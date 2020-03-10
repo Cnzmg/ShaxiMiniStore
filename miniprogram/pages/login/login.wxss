@@ -1,0 +1,50 @@
+/* miniprogram/pages/login/login.wxss */
+page{
+    width: 100%;
+    height: 100%;
+}
+.module{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+.module-box{
+    position: fixed;
+    top: 200rpx;
+    left: 5%;
+    width: 90%;
+    margin: 0 auto;
+    height: 500rpx;
+    background: white;
+    text-align: center;
+}
+.module-box text{
+    display: block;
+    margin: 50rpx 0;
+    color: rgb(252, 117, 38);
+}
+.module-box view{
+    margin:  0 50rpx;
+}
+.module-box button{
+    position: absolute;
+    bottom:0;
+    border-radius: 0 !important;
+    color: #fff;
+    /* height: 100rpx; */
+    line-height: 80rpx;
+}
+.module-box button:nth-of-type(1){
+    width: 30%;
+    left: 0;
+    background: rgb(196, 196, 196);
+    color: rgb(158, 158, 158);
+}
+.module-box button:nth-of-type(2){
+    background: rgb(252, 117, 38);
+    width: 70%;
+    right: 0;
+}

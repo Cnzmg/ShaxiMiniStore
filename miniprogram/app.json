@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/pay/pay",
-    "pages/order/order"
+    "pages/order/order",
+    "pages/login/login"
   ],
   "window": {
     "backgroundTextStyle": "light",

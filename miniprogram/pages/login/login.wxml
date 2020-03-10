@@ -1,0 +1,12 @@
+<!-- <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button> -->
+
+<view class="module"></view>
+<view class="module-box">
+    <text>温馨提示</text>
+    <view class>
+        登陆后可以访问更多内容
+        还有海量优惠券等你哦，使用优惠下单更实惠哦。
+    </view>
+    <button class="clone">取消</button>
+    <button class="submit" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">确定</button>
+</view>
