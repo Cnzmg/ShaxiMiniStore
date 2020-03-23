@@ -48,3 +48,7 @@ page{
     width: 70%;
     right: 0;
 }
+.content-text{
+    text-align: left;
+    font-size: 26rpx;
+}

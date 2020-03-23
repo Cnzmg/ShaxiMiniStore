@@ -1,12 +1,12 @@
 <!-- <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button> -->
 
 <view class="module"></view>
-<view class="module-box">
+<view class="module-box" wx:if="{{ assert }}">
     <text>温馨提示</text>
     <view class>
-        登陆后可以访问更多内容
-        还有海量优惠券等你哦，使用优惠下单更实惠哦。
+        <view> 个人中心需要登陆才能访问 </view>
+        <view class="content-text"> 登陆后有海量优惠券等你，使用优惠下单更实惠哦。 </view>
     </view>
-    <button class="clone">取消</button>
+    <button class="clone" bindtap="callbackfn">取消</button>
     <button class="submit" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">确定</button>
 </view>
