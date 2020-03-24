@@ -4,7 +4,8 @@
     "pages/logs/logs",
     "pages/pay/pay",
     "pages/order/order",
-    "pages/login/login"
+    "pages/login/login",
+    "pages/assert/assert"
   ],
   "window": {
     "backgroundTextStyle": "light",
