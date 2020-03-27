@@ -13,15 +13,18 @@
 		"beforeUpload": "npm run tsc"
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"enhance": false,
 		"postcss": true,
+		"preloadBackgroundData": false,
 		"minified": true,
 		"newFeature": true,
 		"coverView": true,
 		"nodeModules": false,
 		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
 		"checkInvalidKey": true,
 		"checkSiteMap": true,
 		"uploadWithSourceMap": true,
@@ -30,10 +33,7 @@
 			"disablePlugins": [],
 			"outputPath": ""
 		},
-		"bundle": false,
-		"preloadBackgroundData": false,
-		"showShadowRootInWxmlPanel": true,
-		"scopeDataCheck": false
+		"bundle": false
 	},
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},

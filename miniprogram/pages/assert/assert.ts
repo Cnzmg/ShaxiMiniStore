@@ -8,7 +8,7 @@ Page({
   onLoad(options: any) {
       console.log(options);
     this.setData({
-        url: 'https://pos.cbcoffee.cn/addons/niushop_b2b2c/core/index.php/wap/login/index.html?openid=' + options.openid +'&user=' + options.user
+        url: 'https://m1.coffeedz.com/index.php?s=/wap/login&token=' + options.token 
     })
   },
 })

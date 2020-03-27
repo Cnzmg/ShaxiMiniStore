@@ -1,6 +1,6 @@
 const login = getApp<IAppOption>()
 
-const HttpApiFollow = 'https://pos.cbcoffee.cn/addons/niushop_b2b2c/core/index.php/wap/login/resGrant';
+const HttpApiFollow = 'https://m1.coffeedz.com/index.php?s=/wap/MiniDzPage/miniWx';
 
 Page({
   data: {
@@ -19,23 +19,25 @@ Page({
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称
           wx.getUserInfo({
             success: function (params) {  // 获取的用户信息
-
-              let user = JSON.stringify({
+              let user:any = {};
+              user['param'] = JSON.stringify({
                 nickName: JSON.parse(params.rawData).nickName,
                 avatarUrl: JSON.parse(params.rawData).avatarUrl
-              })
-
+              });
               wx.login({
-                success: res => {
+                success: (res) => {
                   wx.request({
                     url: HttpApiFollow,
                     method: "POST",
                     data: { code: res.code },
                     success: (success: any) => {
-                      console.log(success);
-                      wx.reLaunch({
-                        url: "/pages/assert/assert?openid="+ success.data.openids + "&user=" + user
-                      })
+                      user['name'] = success.data.user;  // 用户名存储
+                      user['token'] = success.data.token ? success.data.token : null;
+
+                      // wx.reLaunch({
+                      //   url: "/pages/assert/assert?token=" + JSON.stringify(user)
+                      // })
+
                     },
                     fail: () => {
                       wx.showToast({
