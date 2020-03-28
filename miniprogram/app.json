@@ -5,7 +5,9 @@
     "pages/pay/pay",
     "pages/order/order",
     "pages/login/login",
-    "pages/assert/assert"
+    "pages/assert/assert",
+    "pages/user/user",
+    "pages/error/error"
   ],
   "window": {
     "backgroundTextStyle": "light",

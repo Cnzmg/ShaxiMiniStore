@@ -1,6 +1,6 @@
 const login = getApp<IAppOption>()
 
-const HttpApiFollow = 'https://m1.coffeedz.com/index.php?s=/wap/MiniDzPage/miniWx';
+const HttpApiFollow = 'https://m1.coffeedz.com/index.php?s=/wap/minipage/miniWx';
 
 Page({
   data: {
@@ -33,11 +33,9 @@ Page({
                     success: (success: any) => {
                       user['name'] = success.data.user;  // 用户名存储
                       user['token'] = success.data.token ? success.data.token : null;
-
-                      // wx.reLaunch({
-                      //   url: "/pages/assert/assert?token=" + JSON.stringify(user)
-                      // })
-
+                      wx.reLaunch({
+                        url: "/pages/assert/assert?token=" + JSON.stringify(user)
+                      })
                     },
                     fail: () => {
                       wx.showToast({
@@ -61,11 +59,13 @@ Page({
   },
 
   bindGetUserInfo(params: any) {  //新用户启用注册
-    let user = JSON.stringify({
-      nickName: JSON.parse(params.detail.rawData).nickName,
-      avatarUrl: JSON.parse(params.detail.rawData).avatarUrl
-    })
-    console.log(user);
+    console.log(params);
+    
+    let user:any = {};
+        user['param'] = JSON.stringify({
+          nickName: JSON.parse(params.rawData).nickName,
+          avatarUrl: JSON.parse(params.rawData).avatarUrl
+        });
     wx.login({
       success: res => {
         wx.request({
@@ -73,9 +73,10 @@ Page({
           method: "POST",
           data: { code: res.code },
           success: (success: any) => {
-            console.log(success);
+            user['name'] = success.data.user;  // 用户名存储
+            user['token'] = success.data.token ? success.data.token : null;
             wx.reLaunch({
-              url: "/pages/assert/assert?openid="+ success.data.openids + "&user=" + user
+              url: "/pages/assert/assert?token=" + JSON.stringify(user)
             })
           },
           fail: err => {

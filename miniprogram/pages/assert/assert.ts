@@ -8,7 +8,7 @@ Page({
   onLoad(options: any) {
       console.log(options);
     this.setData({
-        url: 'https://m1.coffeedz.com/index.php?s=/wap/login&token=' + options.token 
+        url: 'https://m1.coffeedz.com/index.php?s=/wap/minipage&token=' + options.token
     })
   },
 })

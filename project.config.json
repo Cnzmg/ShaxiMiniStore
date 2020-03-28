@@ -13,7 +13,7 @@
 		"beforeUpload": "npm run tsc"
 	},
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"enhance": false,
 		"postcss": true,
@@ -86,6 +86,13 @@
 					"id": 3,
 					"name": "pages/assert/assert",
 					"pathName": "pages/assert/assert",
+					"query": "openid=123",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/error/error",
+					"pathName": "pages/error/error",
 					"query": "openid=123",
 					"scene": null
 				}
