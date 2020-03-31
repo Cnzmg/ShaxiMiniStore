@@ -7,7 +7,7 @@ Page({
 
   onLoad() {
     this.setData({
-        url: `https://pos.cbcoffee.cn/addons/niushop_b2b2c/core/index.php/wap/order/myorderlist?shop_id=0`
+        url: `https://m1.coffeedz.com/index.php?s=/wap/order/lists`
     })
   },
 

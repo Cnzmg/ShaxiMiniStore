@@ -65,7 +65,7 @@
 					"id": 0,
 					"name": "pages/pay/pay",
 					"pathName": "pages/pay/pay",
-					"query": "",
+					"query": "orderId=158555853418861000",
 					"scene": null
 				},
 				{
@@ -94,6 +94,13 @@
 					"name": "pages/error/error",
 					"pathName": "pages/error/error",
 					"query": "openid=123",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "pages/wolf/wolf",
+					"pathName": "pages/wolf/wolf",
+					"query": "",
 					"scene": null
 				}
 			]

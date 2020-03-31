@@ -1,0 +1,22 @@
+<view class="wolf"  bindtap="user">
+    <view  class="headerImg">
+        <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <open-data type="userNickName" class="headerName"></open-data>
+</view>
+<view class="wolf-coupon"  bindtap="user">
+    <view class="coupon" wx:for="{{ value }}" wx:for-item="value" wx:key="index">
+        <view>0</view>
+        <view>{{ value.name }}</view>
+    </view>
+</view>
+<view class="wolf-container"  bindtap="user">
+    <view class="coupon" wx:for="{{ values }}" wx:for-item="value" wx:key="index">
+        <image src="{{ value.url }}"></image>
+        <view>{{ value.name }}</view>
+    </view>
+</view>
+
+<view style="text-align: center;" bindtap="user">
+    <image style="width: 90px;height: 35px;margin: 30px auto;" src="https://m1.coffeedz.com/upload/config/2020032502011397493.png"></image>
+</view>

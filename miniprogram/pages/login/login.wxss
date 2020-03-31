@@ -17,7 +17,7 @@ page{
     left: 5%;
     width: 90%;
     margin: 0 auto;
-    height: 500rpx;
+    height: 800rpx;
     background: white;
     text-align: center;
 }
@@ -27,7 +27,7 @@ page{
     color: rgb(252, 117, 38);
 }
 .module-box view{
-    margin:  0 50rpx;
+    margin:  0 30rpx;
 }
 .module-box button{
     position: absolute;

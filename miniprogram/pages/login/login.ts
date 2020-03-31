@@ -19,7 +19,7 @@ Page({
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称
           wx.getUserInfo({
             success: function (params) {  // 获取的用户信息
-              let user:any = {};
+              let user: any = {};
               user['param'] = JSON.stringify({
                 nickName: JSON.parse(params.rawData).nickName,
                 avatarUrl: JSON.parse(params.rawData).avatarUrl
@@ -59,13 +59,12 @@ Page({
   },
 
   bindGetUserInfo(params: any) {  //新用户启用注册
-    console.log(params);
-    
-    let user:any = {};
-        user['param'] = JSON.stringify({
-          nickName: JSON.parse(params.rawData).nickName,
-          avatarUrl: JSON.parse(params.rawData).avatarUrl
-        });
+    if (params.detail.errMsg == "getUserInfo:fail auth deny") return;
+    let user: any = {};
+    user['param'] = JSON.stringify({
+      nickName: JSON.parse(params.detail.rawData).nickName,
+      avatarUrl: JSON.parse(params.detail.rawData).avatarUrl
+    });
     wx.login({
       success: res => {
         wx.request({

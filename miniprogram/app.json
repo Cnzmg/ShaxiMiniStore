@@ -7,7 +7,8 @@
     "pages/login/login",
     "pages/assert/assert",
     "pages/user/user",
-    "pages/error/error"
+    "pages/error/error",
+    "pages/wolf/wolf"
   ],
   "window": {
     "backgroundTextStyle": "light",
