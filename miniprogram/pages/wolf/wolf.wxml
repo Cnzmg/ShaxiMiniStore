@@ -3,6 +3,8 @@
         <open-data type="userAvatarUrl"></open-data>
     </view>
     <open-data type="userNickName" class="headerName"></open-data>
+    <button class="headerLoginBtn">登陆</button>
+    <view style="text-align: center;background-color: black; color: white;padding: 10rpx; font-size: 24rpx; box-sizing: border-box;">您还未登陆哦，请点击【登陆】查看更多优惠！</view>
 </view>
 <view class="wolf-coupon"  bindtap="user">
     <view class="coupon" wx:for="{{ value }}" wx:for-item="value" wx:key="index">

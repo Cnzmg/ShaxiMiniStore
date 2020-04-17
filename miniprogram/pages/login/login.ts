@@ -1,6 +1,6 @@
 const login = getApp<IAppOption>()
 
-const HttpApiFollow = 'https://m1.coffeedz.com/index.php?s=/wap/minipage/miniWx';
+const HttpApiFollow = 'https://m1.coffeedz.com/index.php?s=/wap/minipage/miniWx#wechat_redirect';
 
 Page({
   data: {
@@ -21,7 +21,7 @@ Page({
             success: function (params) {  // 获取的用户信息
               let user: any = {};
               user['param'] = JSON.stringify({
-                nickName: JSON.parse(params.rawData).nickName,
+                nickName: JSON.parse(params.rawData).nickName.replace(/\%/g, '*'),
                 avatarUrl: JSON.parse(params.rawData).avatarUrl
               });
               wx.login({
@@ -31,7 +31,7 @@ Page({
                     method: "POST",
                     data: { code: res.code },
                     success: (success: any) => {
-                      user['name'] = success.data.user;  // 用户名存储
+                      user['name'] = success.data.user.replace(/\%/g, '*');  // 用户名存储
                       user['token'] = success.data.token ? success.data.token : null;
                       wx.reLaunch({
                         url: "/pages/assert/assert?token=" + JSON.stringify(user)
@@ -60,9 +60,13 @@ Page({
 
   bindGetUserInfo(params: any) {  //新用户启用注册
     if (params.detail.errMsg == "getUserInfo:fail auth deny") return;
+    wx.showLoading({
+      title: '登陆中',
+      mask: true
+    });
     let user: any = {};
     user['param'] = JSON.stringify({
-      nickName: JSON.parse(params.detail.rawData).nickName,
+      nickName: JSON.parse(params.detail.rawData).nickName.replace(/\%/g, '*'),
       avatarUrl: JSON.parse(params.detail.rawData).avatarUrl
     });
     wx.login({
@@ -72,8 +76,10 @@ Page({
           method: "POST",
           data: { code: res.code },
           success: (success: any) => {
-            user['name'] = success.data.user;  // 用户名存储
-            user['token'] = success.data.token ? success.data.token : null;
+            user['name'] = success.data.user.replace(/\%/g, '*');  // 用户名存储
+            user['token'] = success.data.token ? success.data.token : null;  //新用户会返回token ，老用户只是返回user
+            console.log(JSON.stringify(user))
+            wx.hideLoading();
             wx.reLaunch({
               url: "/pages/assert/assert?token=" + JSON.stringify(user)
             })

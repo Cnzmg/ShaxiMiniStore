@@ -17,7 +17,7 @@ page{
     left: 5%;
     width: 90%;
     margin: 0 auto;
-    height: 800rpx;
+    height: 600rpx;
     background: white;
     text-align: center;
 }
@@ -36,16 +36,17 @@ page{
     color: #fff;
     /* height: 100rpx; */
     line-height: 80rpx;
+    font-size: 26rpx;
 }
 .module-box button:nth-of-type(1){
-    width: 30%;
+    width: 40%;
     left: 0;
     background: rgb(196, 196, 196);
     color: rgb(158, 158, 158);
 }
 .module-box button:nth-of-type(2){
     background: rgb(252, 117, 38);
-    width: 70%;
+    width: 60%;
     right: 0;
 }
 .content-text{

@@ -86,7 +86,7 @@
 					"id": 3,
 					"name": "pages/assert/assert",
 					"pathName": "pages/assert/assert",
-					"query": "openid=123",
+					"query": "token=%257B%2522param%2522%253A%2522%257B%255C%2522nickName%255C%2522%253A%255C%2522%25E6%258B%2589%25E5%25B8%2583%25E6%258B%2589%25E5%25A4%259A%25E6%258B%2589%25E4%25B8%258D%25E5%25A4%259A%255C%2522%252C%255C%2522avatarUrl%255C%2522%253A%255C%2522https%253A%252F%252Fwx.qlogo.cn%252Fmmopen%252Fvi_32%252F1XMvw5Pao2ddspJEQNxMjGJ5jeljQaP6aRDlFibCtDpveeRFpfs0qQauia9qrx65s9N68PZ6E1rf1OxHHQJNr0Aw%252F132%255C%2522%257D%2522%252C%2522name%2522%253A%2522ozTu25OYRoP_y2k53vQ02XR0Nttk%2522%252C%2522token%2522%253Anull%257D",
 					"scene": null
 				},
 				{

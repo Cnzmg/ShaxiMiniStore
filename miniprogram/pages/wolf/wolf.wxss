@@ -29,14 +29,23 @@ image{
     z-index: 1;
     color: white;
 }
+.headerLoginBtn{
+    position: absolute;
+    top: 100rpx;
+    right: 40rpx;
+    z-index: 1;
+    width: 200rpx !important;
+    font-size: 26rpx;
+}
 .wolf-coupon{
     width: 90%;
     border-radius: 10px;
-    background-color: #ffff;
+    background-color: #fff;
     height: 60px;
     margin: 0 auto;
     transform: translateY(-35px);
     padding-top: 10px;
+    overflow: hidden;
 }
 .wolf-coupon .coupon{
     width: 33.33%;
