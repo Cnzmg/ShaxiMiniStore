@@ -6,7 +6,7 @@
 	"miniprogramRoot": "miniprogram/",
 	"compileType": "miniprogram",
 	"libVersion": "2.10.2",
-	"projectname": "shop",
+	"projectname": "DzShaXiStore",
 	"scripts": {
 		"beforeCompile": "npm run tsc",
 		"beforePreview": "npm run tsc",
@@ -101,6 +101,12 @@
 					"name": "pages/wolf/wolf",
 					"pathName": "pages/wolf/wolf",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/openmini/openmini",
+					"pathName": "pages/openmini/openmini",
 					"scene": null
 				}
 			]

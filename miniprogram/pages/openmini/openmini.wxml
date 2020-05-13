@@ -1,0 +1,9 @@
+<view class="container">
+    <view class="box">
+        <view class="tile">温馨提示</view>
+        <view>您正前往《售后服务》平台</view>
+        <view class="submit" bindtap="bindViewTap">
+            立即前往
+        </view>
+    </view>
+</view>

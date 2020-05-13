@@ -8,7 +8,8 @@
     "pages/assert/assert",
     "pages/user/user",
     "pages/error/error",
-    "pages/wolf/wolf"
+    "pages/wolf/wolf",
+    "pages/openmini/openmini"
   ],
   "window": {
     "backgroundTextStyle": "light",

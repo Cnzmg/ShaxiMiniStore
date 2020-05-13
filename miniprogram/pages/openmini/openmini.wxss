@@ -1,0 +1,13 @@
+page{
+    text-align: center;
+    line-height: 30px;
+}
+.submit{
+    width: 80%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+    background-color: #e83928;
+    margin: 60px auto;
+}
