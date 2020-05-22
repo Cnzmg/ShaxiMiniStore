@@ -9,7 +9,8 @@
     "pages/user/user",
     "pages/error/error",
     "pages/wolf/wolf",
-    "pages/openmini/openmini"
+    "pages/openmini/openmini",
+    "pages/view/view"
   ],
   "window": {
     "backgroundTextStyle": "light",

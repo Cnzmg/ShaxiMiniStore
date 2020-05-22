@@ -7,4 +7,3 @@
         </view>
     </view>
 </view>
-        <button open-type="contact" bindcontact="handleContact">联系</button>

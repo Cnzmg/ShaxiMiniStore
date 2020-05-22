@@ -1,0 +1,9 @@
+<view class="container">
+    <view class="box">
+        <view class="tile">温馨提示</view>
+        <view>您正前往《客户服务》平台</view>
+        <view class="submit">
+            <button open-type="contact" bindcontact="handleContact">前往咨询</button>
+        </view>
+    </view>
+</view>

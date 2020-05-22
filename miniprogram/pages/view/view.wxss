@@ -1,0 +1,21 @@
+page{
+    text-align: center;
+    line-height: 30px;
+}
+.submit{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+    background-color: #e83928;
+    margin: 60px auto;
+}
+.submit button{
+    background-color: #e83928;
+    color: white;
+    font-size: 26rpx;
+    height: 40px;
+    line-height: 40px;
+    padding: 0;
+    border-radius: 10px;
+}
